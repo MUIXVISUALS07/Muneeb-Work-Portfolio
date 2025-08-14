@@ -414,3 +414,50 @@
   }
   document.addEventListener('mousemove', cursorMovingAnimation);
 })(jQuery); // End of use strict
+
+
+
+/* =======================
+   Tools Typing Animation
+   ======================= */
+const tools = [
+  "Figma",
+  "Illustrator",
+  "Photoshop",
+  "Premiere Pro",
+  "Phase",
+  "Webflow",
+  "After Effect"
+];
+
+let toolIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  const currentTool = tools[toolIndex];
+  const currentText = currentTool.substring(0, charIndex);
+
+  typingElement.textContent = currentText;
+
+  if (!isDeleting && charIndex < currentTool.length) {
+    charIndex++;
+    setTimeout(typeEffect, 120);
+  } 
+  else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(typeEffect, 60);
+  } 
+  else if (!isDeleting && charIndex === currentTool.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1000);
+  } 
+  else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    toolIndex = (toolIndex + 1) % tools.length;
+    setTimeout(typeEffect, 300);
+  }
+}
+
+typeEffect();

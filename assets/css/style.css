@@ -4075,3 +4075,110 @@ position: relative;
 .cs_portfolio.cs_style_1 .cs_portfolio_grid_btn.text-center {
   margin-top: -5px;
 }/*# sourceMappingURL=style.css.map */
+
+
+.tools-section {
+  background-color: #14171b;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 250px; /* Keeps height consistent */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tools-subtitle {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.tools-title {
+  font-size: 4rem;
+  min-height: 5rem;
+  font-weight: 900;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* Tools  */
+/* =======================
+   Tools Typing Animation
+   ======================= */
+.tools-section {
+  background-color: #14171b;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  /* min-height: 250px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tools-subtitle {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.tools-title {
+  font-size: 4rem;
+  font-weight: 900;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* Blinking Cursor */
+.cursor {
+  display: inline-block;
+  width: 6px; /* slightly thicker */
+  background-color: white;
+  margin-left: 4px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { background-color: transparent; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tools-title {
+    font-size: 2.5rem;
+  }
+  .tools-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-title {
+    font-size: 1.5rem;
+  }
+  .tools-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .tools-section {
+  background-color: #14171b;
+  color: white;
+  text-align: center;
+  padding: 40px 12px;
+  /* min-height: 250px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
+/* Tools  */
