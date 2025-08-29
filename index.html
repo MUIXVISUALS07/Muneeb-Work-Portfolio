@@ -86,41 +86,61 @@
 
 
   <!-- Start Hero Section -->
-  <section class="cs_hero cs_style_1 cs_center position-relative cs_hobble" id="home">
-    <style>
-      /* Default background image for larger screens */
-      #home {
-        background: url('assets/img/BG2.jpg') no-repeat center center;
-        background-size: cover;
-        min-height: 100vh;
-      }
+<section class="cs_hero cs_style_1 cs_center position-relative cs_hobble" id="home">
+  <style>
+    /* Default background image for larger screens */
+    #home {
+      background: url('assets/img/BG2.jpg') no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      position: relative; /* ✅ required for absolute children */
+    }
 
-      /* Media Query for smaller screen sizes to change background image */
-      @media (max-width: 998px) {
-        #home {
-          background: url('assets/img/BG-mobile.jpg') no-repeat center center;
-          background-size: contain;
-          background-color: #14171c
-        }
+    /* Media Query for smaller screen sizes to change background image */
+    @media (max-width: 998px) {
+      #home {
+        background: url('assets/img/BG-mobile.jpg') no-repeat center center;
+        background-size: contain;
+        background-color: #14171c;
       }
-    </style>
-    <div class="container position-relative">
-      <div class="cs_hero_text position-relative wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"
-        style="text-align: left;">
-        <h3 class="cs_hero_title_up cs_fs_28 mb-0 cs_secondary_color">Hi There,</h3>
-        <h1 class="cs_hero_title cs_fs_90 cs_mb_18">I am Muneeb <br> Ui/Ux designer</h1>
-        <p class="cs_hero_subtitle cs_mb_70">I design thoughtful solutions that create meaningful digital experiences.
-        </p>
-      </div>
+    }
+
+    /* ✅ Floating tag styles */
+    .floating-tag {
+      position: absolute;
+      top: 80%;   /* adjust Y */
+      left: 55%;  /* adjust X */
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 200px; /* control size */
+      animation: floatTag 3s ease-in-out infinite;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      .floating-tag {
+        width: 120px;   /* smaller on mobile */
+        top: 80%; 
+        left: 28%;
+      }
+    }
+  </style>
+
+  <div class="container position-relative">
+    <div class="cs_hero_text position-relative wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"
+      style="text-align: left;">
+      <h3 class="cs_hero_title_up cs_fs_28 mb-0 cs_secondary_color">Hi, I am</h3>
+      <h1 class="cs_hero_title cs_fs_90 cs_mb_18">Muhammad <br> Muneeb</h1>
+      <p class="cs_hero_subtitle cs_mb_70">I design thoughtful solutions that create meaningful digital experiences.</p>
     </div>
-    <div class="cs_hero_social_btns wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
-      <a href="#" class="cs_center cs_radius_7"><i class="fa-brands fa-dribbble"></i></a>
-      <a href="#" class="cs_center cs_radius_7"><i class="fa-brands fa-pinterest-p"></i></a>
-      <a href="#" class="cs_center cs_radius_7"><i class="fa-brands fa-behance"></i></a>
-      <a href="#" class="cs_center cs_radius_7"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </section>
-  <!-- End Hero Section -->
+  </div>
+
+  <!-- ✅ Floating Tag Image -->
+  <img src="assets/img/mouse2.png" alt="Floating Tag" class="floating-tag">
+</section>
+<!-- End Hero Section -->
+
 
 
 
@@ -133,6 +153,55 @@
       <div class="cs_moving_text">Creative Visual Designer </div>
     </div>
   </div>
+
+
+  <!-- WHAT I DO -->
+  <section class="">
+    <div class="cs_height_145 cs_height_lg_75"></div>
+    <div class="container">
+      <div class="cs_section_heading cs_style_1">
+        <p class="cs_section_subtitle cs_accent_color cs_mb_16 wow fadeInUp" data-wow-duration="0.8s"
+          data-wow-delay="0.2s">What I Do</p>
+        <h2 class="cs_section_title cs_fs_67 mb-0">I design beautiful websites, apps, and design systems that help
+          digital products grow fast and smart.</h2>
+      </div>
+      <div class="cs_height_95 cs_height_lg_50"></div>
+      <section id="portfolio">
+        <div class="container">
+          <div class="cs_grid_1 cs_lightgallery">
+            <div class="cs_grid_item">
+
+            </div>
+            <div class="cs_grid_item">
+              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
+                <img src="assets/img/gifs/Dashboards.gif" alt="">
+              </div>
+            </div>
+            <div class="cs_grid_item">
+              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
+                <img src="assets/img/gifs/Mobiles.gif" alt="">
+              </div>
+            </div>
+            <div class="cs_grid_item">
+              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
+                <img src="assets/img/gifs/Websites.gif" alt="">
+              </div>
+            </div>
+            <div class="cs_grid_item">
+              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
+                <img src="assets/img/gifs/Heros.gif" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="cs_height_80 cs_height_lg_40"></div>
+      </section>
+
+    </div>
+    <!-- <div class="cs_height_150 cs_height_lg_80"></div> -->
+  </section>
+  <!-- End WHAT I DO -->
 
   <!-- Start About Section -->
   <section class="cs_ternary_bg" id="about">
@@ -206,118 +275,75 @@
   <!-- End About Section -->
 
 
-  <!-- Start Portfolio Section -->
-  <section id="portfolio">
-    <div class="cs_height_126 cs_height_lg_80"></div>
-    <div class="container">
-      <div class="cs_grid_1 cs_lightgallery">
-        <div class="cs_grid_item">
-          <div class="cs_section_heading cs_style_1">
-            <p class="cs_section_subtitle cs_accent_color cs_mb_16 wow fadeInLeft" data-wow-duration="0.8s"
-              data-wow-delay="0.2s">Portfolio</p>
-            <h2 class="cs_section_title cs_fs_67 mb-0">Featured Projects</h2>
-          </div>
-          <div class="cs_height_50 cs_height_lg_50"></div>
-        </div>
-        <div class="cs_grid_item">
-          <a href="assets/img/Portfolio/Proj1.jpg"
-            class="cs_portfolio cs_style_1 cs_lightbox_item cs_radius_15 overflow-hidden d-block position-relative">
-            <img src="assets/img/Portfolio/Proj1_thumbnail.jpg" alt="">
-            <span class="cs_portfolio_btn cs_fs_28 cs_semibold">
-              <span>Boletaso</span>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.5 2C20.5 1.17157 19.8284 0.5 19 0.5L5.5 0.499999C4.67157 0.499999 4 1.17157 4 2C4 2.82843 4.67157 3.5 5.5 3.5H17.5V15.5C17.5 16.3284 18.1716 17 19 17C19.8284 17 20.5 16.3284 20.5 15.5L20.5 2ZM3.06066 20.0607L20.0607 3.06066L17.9393 0.939339L0.93934 17.9393L3.06066 20.0607Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-        </div>
-        <div class="cs_grid_item">
-          <a href="assets/img/Portfolio/Proj1.jpg"
-            class="cs_portfolio cs_style_1 cs_lightbox_item cs_radius_15 overflow-hidden d-block position-relative">
-            <img src="assets/img/Portfolio/Proj1_thumbnail.jpg" alt="">
-            <span class="cs_portfolio_btn cs_fs_28 cs_semibold">
-              <span>Project name</span>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.5 2C20.5 1.17157 19.8284 0.5 19 0.5L5.5 0.499999C4.67157 0.499999 4 1.17157 4 2C4 2.82843 4.67157 3.5 5.5 3.5H17.5V15.5C17.5 16.3284 18.1716 17 19 17C19.8284 17 20.5 16.3284 20.5 15.5L20.5 2ZM3.06066 20.0607L20.0607 3.06066L17.9393 0.939339L0.93934 17.9393L3.06066 20.0607Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-        </div>
-        <div class="cs_grid_item">
-          <a href="assets/img/Portfolio/Proj1.jpg"
-            class="cs_portfolio cs_style_1 cs_lightbox_item cs_radius_15 overflow-hidden d-block position-relative">
-            <img src="assets/img/Portfolio/Proj1_thumbnail.jpg" alt="">
-            <span class="cs_portfolio_btn cs_fs_28 cs_semibold">
-              <span>Project name</span>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.5 2C20.5 1.17157 19.8284 0.5 19 0.5L5.5 0.499999C4.67157 0.499999 4 1.17157 4 2C4 2.82843 4.67157 3.5 5.5 3.5H17.5V15.5C17.5 16.3284 18.1716 17 19 17C19.8284 17 20.5 16.3284 20.5 15.5L20.5 2ZM3.06066 20.0607L20.0607 3.06066L17.9393 0.939339L0.93934 17.9393L3.06066 20.0607Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-        </div>
-        <div class="cs_grid_item">
-          <a href="assets/img/Portfolio/Proj1.jpg"
-            class="cs_portfolio cs_style_1 cs_lightbox_item cs_radius_15 overflow-hidden d-block position-relative">
-            <img src="assets/img/Portfolio/Proj1_thumbnail.jpg" alt="">
-            <span class="cs_portfolio_btn cs_fs_28 cs_semibold">
-              <span>Project name</span>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.5 2C20.5 1.17157 19.8284 0.5 19 0.5L5.5 0.499999C4.67157 0.499999 4 1.17157 4 2C4 2.82843 4.67157 3.5 5.5 3.5H17.5V15.5C17.5 16.3284 18.1716 17 19 17C19.8284 17 20.5 16.3284 20.5 15.5L20.5 2ZM3.06066 20.0607L20.0607 3.06066L17.9393 0.939339L0.93934 17.9393L3.06066 20.0607Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-        </div>
-        <div class="cs_grid_item">
-          <a href="assets/img/Portfolio/Proj1.jpg"
-            class="cs_portfolio cs_style_1 cs_lightbox_item cs_radius_15 overflow-hidden d-block position-relative">
-            <img src="assets/img/Portfolio/Proj1_thumbnail.jpg" alt="">
-            <span class="cs_portfolio_btn cs_fs_28 cs_semibold">
-              <span>Project name</span>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.5 2C20.5 1.17157 19.8284 0.5 19 0.5L5.5 0.499999C4.67157 0.499999 4 1.17157 4 2C4 2.82843 4.67157 3.5 5.5 3.5H17.5V15.5C17.5 16.3284 18.1716 17 19 17C19.8284 17 20.5 16.3284 20.5 15.5L20.5 2ZM3.06066 20.0607L20.0607 3.06066L17.9393 0.939339L0.93934 17.9393L3.06066 20.0607Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-        </div>
-        <div class="cs_grid_item">
-          <a href="assets/img/Portfolio/Proj1.jpg"
-            class="cs_portfolio cs_style_1 cs_lightbox_item cs_radius_15 overflow-hidden d-block position-relative">
-            <img src="assets/img/Portfolio/Proj1_thumbnail.jpg" alt="">
-            <span class="cs_portfolio_btn cs_fs_28 cs_semibold">
-              <span>Project name</span>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.5 2C20.5 1.17157 19.8284 0.5 19 0.5L5.5 0.499999C4.67157 0.499999 4 1.17157 4 2C4 2.82843 4.67157 3.5 5.5 3.5H17.5V15.5C17.5 16.3284 18.1716 17 19 17C19.8284 17 20.5 16.3284 20.5 15.5L20.5 2ZM3.06066 20.0607L20.0607 3.06066L17.9393 0.939339L0.93934 17.9393L3.06066 20.0607Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-        </div>
-        <!-- <div class="cs_grid_item">
-          <div class="cs_portfolio_grid_btn text-center wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
-            <a href="#" class="cs_btn cs_style_1 cs_radius_15">More Projects</a>
-          </div>
-        </div> -->
+   <!-- Start Portfolio Section -->
+<section id="portfolio">
+  <div class="cs_height_126 cs_height_lg_80"></div>
+
+  <div class="container">
+    <div class="projects-grid">
+
+      <div class="cs_section_heading cs_style_1">
+        <p class="cs_section_subtitle cs_accent_color cs_mb_16 wow fadeInLeft" data-wow-duration="0.8s"
+          data-wow-delay="0.2s">Portfolio</p>
+        <h2 class="cs_section_title cs_fs_67 mb-0">Featured Projects</h2>
       </div>
+      <div class="cs_height_50 cs_height_lg_50"></div>
+
+
+      
+      <!-- Project Card -->
+      <a href="boletaso.html" class="project-card">
+        <img src="Projects/boletaso/01.png" alt="Project Title">
+        <div class="project-info">
+          <h3>BOLETASO-Event Booking Platform</h3>
+          <p>Website</p>
+        </div>
+      </a>
+
+      <a href="community-timebank.html" class="project-card">
+        <img src="Projects/community-timebank/01.png" alt="Project Title">
+        <div class="project-info">
+          <h3>Community Time Bank App</h3>
+          <p>Mobile App</p>
+        </div>
+      </a>
+
+      <a href="e-bikes.html" class="project-card">
+        <img src="Projects/e-bikes/01.png" alt="Project Title">
+        <div class="project-info">
+          <h3>E-Bikes E-Commerce UX/UI</h3>
+          <p>E-Commerce Website</p>
+        </div>
+      </a>
+
+      <a href="fancentrale.html" class="project-card">
+        <img src="Projects/fancentrale/01.png" alt="Project Title">
+        <div class="project-info">
+          <h3>Fancentrale Fan Engagement Platform</h3>
+          <p>Web App</p>
+        </div>
+      </a>
+
+      
     </div>
-    <div class="cs_height_80 cs_height_lg_40"></div>
-  </section>
-  <!-- End Portfolio Section -->
+    <!-- CTA Button -->
+<div class="cs_height_50"></div>
+<div class="text-center">
+  <a href="Project.html" class="cta-btn">
+    View More Projects
+  </a>
+</div>
+
+
+  <div class="cs_height_80 cs_height_lg_40"></div>
+</section>
+<!-- End Portfolio Section -->
+
 
 
 
   <!-- CAPABILITIES -->
-  <section class="cs_ternary_bg">
+  <!-- <section class="cs_ternary_bg">
     <div class="cs_height_145 cs_height_lg_75"></div>
     <div class="container">
       <div class="cs_section_heading cs_style_1 text-center">
@@ -370,56 +396,9 @@
       </div>
     </div>
     <div class="cs_height_150 cs_height_lg_80"></div>
-  </section>
+  </section> -->
   <!-- End CAPABILITIES -->
 
-  <!-- WHAT I DO -->
-  <section class="">
-    <div class="cs_height_145 cs_height_lg_75"></div>
-    <div class="container">
-      <div class="cs_section_heading cs_style_1">
-        <p class="cs_section_subtitle cs_accent_color cs_mb_16 wow fadeInUp" data-wow-duration="0.8s"
-          data-wow-delay="0.2s">What I Do</p>
-        <h2 class="cs_section_title cs_fs_67 mb-0">I design beautiful websites, apps, and design systems that help
-          digital products grow fast and smart.</h2>
-      </div>
-      <div class="cs_height_95 cs_height_lg_50"></div>
-      <section id="portfolio">
-        <div class="container">
-          <div class="cs_grid_1 cs_lightgallery">
-            <div class="cs_grid_item">
-
-            </div>
-            <div class="cs_grid_item">
-              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
-                <img src="assets/img/gifs/Dashboards.gif" alt="">
-              </div>
-            </div>
-            <div class="cs_grid_item">
-              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
-                <img src="assets/img/gifs/Mobiles.gif" alt="">
-              </div>
-            </div>
-            <div class="cs_grid_item">
-              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
-                <img src="assets/img/gifs/Websites.gif" alt="">
-              </div>
-            </div>
-            <div class="cs_grid_item">
-              <div class="cs_style_1 cs_radius_15 overflow-hidden d-block position-relative">
-                <img src="assets/img/gifs/Heros.gif" alt="">
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="cs_height_80 cs_height_lg_40"></div>
-      </section>
-
-    </div>
-    <div class="cs_height_150 cs_height_lg_80"></div>
-  </section>
-  <!-- End WHAT I DO -->
 
 
   <!-- Tools I use -->
@@ -593,69 +572,86 @@
   </section>
   <!-- End Testimonial Section -->
 
+
+
   <!-- 4 Project Section -->
+<div class="">
+  <section class="fullwidth-image-row cs_web-wash_bg">
+    <img src="assets/img/proj/reality-check.png" alt="Image 1" />
+    <img src="assets/img/proj/kleen-notes.png" alt="Image 2" />
+    <img src="assets/img/proj/interior-design.png" alt="Image 3" />
+    <img src="assets/img/proj/solvgard.png" alt="Image 4" />
+  </section>
+</div>
 
-  <div class="">
-    <!-- HTML -->
-    <section class="fullwidth-image-row cs_ternary_bg">
-      <img src="assets/img/proj/proj_holder01.png" alt="Image 1" />
-      <img src="assets/img/proj/proj_holder02.png" alt="Image 2" />
-      <img src="assets/img/proj/proj_holder03.png" alt="Image 3" />
-      <img src="assets/img/proj/proj_holder04.png" alt="Image 4" />
-      <!-- Add the rest of your 2x8 images here -->
-    </section>
+<style>
+  /* Default (Desktop) – 4 column grid */
+.fullwidth-image-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px; /* spacing between images */
+  /* padding: 12px; */
+}
+
+.fullwidth-image-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* border-radius: 12px; */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+/* Hover effect: 3D tilt/parallax */
+.fullwidth-image-row img:hover {
+  transform: perspective(800px) rotateY(3deg) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
 
 
-    <!-- CSS -->
-    <style>
-      .fullwidth-image-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        /* gap: 20px; */
-        perspective: 800px;
-        /* Creates depth */
-      }
+  /* Mobile – turn into horizontal slider */
+  @media (max-width: 768px) {
+    .fullwidth-image-row {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      gap: 0px;
+    }
 
-      .fullwidth-image-row img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        transition:
-          transform 0.4s ease,
-          box-shadow 0.3s ease;
-        transform-style: preserve-3d;
-        will-change: transform;
-      }
+    .fullwidth-image-row img {
+      min-width: 100%;
+      flex-shrink: 0;
+      animation: slideShow 12s infinite;
+    }
 
-      .fullwidth-image-row img:hover {
-        transform: perspective(800px) translateZ(8px) rotateX(0deg);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-      }
+    /* Keyframes for looping through 4 images (4s each) */
+    @keyframes slideShow {
+      0%, 20% { transform: translateX(0%); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 95% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+  }
 
-      .fullwidth-image-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        /* gap: 20px; */
-      }
+  /* Use custom Figma cursor */
+body {
+  cursor: url('assets/img/figma-cursor.svg') 0 0, auto;
+}
 
-      .fullwidth-image-row img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      }
+/* Links & buttons */
+a, button {
+  cursor: url('assets/img/figma-cursor-hover.svg') 0 0, pointer;
+}
 
-      @media (max-width: 768px) {
-        .fullwidth-image-row {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+</style>
 
-  </div>
 
   <!-- End 4 Project Section -->
+
+  
 
 
 
@@ -668,11 +664,11 @@
           <h6>LET’S CONNECT</h6>
           <div class="footer-line"></div>
           <h2>Say Hello!</h2>
-          <a href="mailto:munbdesign07@gmail.com" class="email-btn">Email me →</a>
+          <a href="mailto:muneebdesign07@gmail.com" class="email-btn">Email me →</a>
         </div>
         <div class="footer-right">
           <p>For project inquiries only:</p>
-          <a href="mailto:munbdesign07@gmail.com">munbdesign07@gmail.com</a>
+          <a href="mailto:muneebdesign07@gmail.com">muneebdesign07@gmail.com</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -691,8 +687,9 @@
   <script src="assets/js/lightgallery.min.js"></script>
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/ripples.min.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
+  <!-- <script src="assets/js/gsap.min.js"></script> -->
   <script src="assets/js/main.js"></script>
+  
 </body>
 
 </html>

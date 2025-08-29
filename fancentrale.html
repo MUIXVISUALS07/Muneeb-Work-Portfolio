@@ -85,60 +85,53 @@
   <!-- End Header Section -->
 
 
-  
+
   <!-- Page Title Section -->
-<section class="page-title-section">
-  <div class="container">
-    <h1 class="page-title">Portfolio</h1>
-  </div>
-</section>
-
-<!-- Projects Grid -->
-<!-- <section class="projects-grid"> -->
-  <div class="container">
-    <div class="projects-grid">
-
-      <!-- Project Card -->
-      <a href="boletaso.html" class="project-card">
-        <img src="Projects/boletaso/01.png" alt="Project Title">
-        <div class="project-info">
-          <h3>BOLETASO-Event Booking Platform</h3>
-          <p>Website</p>
+  <section class="page-title-section">
+    <div class="container">
+      <div class="cs_height_50 cs_height_lg_75"></div>
+    
+      <div class="project-header">
+        <!-- Left: Title & Description -->
+        <div class="project-header-left">
+          <h1 class="page-title">Fancentrale Fan Engagement Platform</h1>
+          <p class="project-subheading">
+            Fancentrale is a web app that connects creators with their fans through exclusive
+        content and monetization options. I designed the platform with a coins-based system, subscription features, and
+        gamified levels, ensuring both creators and fans enjoy a fun, engaging, and rewarding experience.
+          </p>
         </div>
-      </a>
 
-      <a href="community-timebank.html" class="project-card">
-        <img src="Projects/community-timebank/01.png" alt="Project Title">
-        <div class="project-info">
-          <h3>Community Time Bank App</h3>
-          <p>Mobile App</p>
+        <!-- Right: Info Blocks -->
+        <div class="project-header-right">
+          <div class="info-block">
+            <h4>Strategy</h4>
+            <p>Placeholder text about the project strategy.</p>
+          </div>
+          <div class="info-block">
+            <h4>Design</h4>
+            <p>Placeholder text about the design process.</p>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a href="e-bikes.html" class="project-card">
-        <img src="Projects/e-bikes/01.png" alt="Project Title">
-        <div class="project-info">
-          <h3>E-Bikes E-Commerce UX/UI</h3>
-          <p>E-Commerce Website</p>
-        </div>
-      </a>
 
-      <a href="fancentrale.html" class="project-card">
-        <img src="Projects/fancentrale/01.png" alt="Project Title">
-        <div class="project-info">
-          <h3>Fancentrale Fan Engagement Platform</h3>
-          <p>Web App</p>
-        </div>
-      </a>
+    <div class="container">
+
+      <div class="project-images">
+        <img src="Projects/fancentrale/01.png" alt="Project image 1">
+        <img src="Projects/fancentrale/02.png" alt="Project image 2">
+        <img src="Projects/fancentrale/03.png" alt="Project image 3">
+        <img src="Projects/fancentrale/04.png" alt="Project image 4">
+        <img src="Projects/fancentrale/05.png" alt="Project image 5">
+        <img src="Projects/fancentrale/06.png" alt="Project image 6">
+        <img src="Projects/fancentrale/07.png" alt="Project image 7">
+      </div>
+
     </div>
-  </div>
-<!-- </section> -->
+  </section>
 
-
-
-
-
-<!-- Start 2nd Footer Section -->
+  <!-- Start 2nd Footer Section -->
   <footer class="footer-section">
     <div class="container">
       <div class="footer-content">
@@ -172,91 +165,107 @@
 
 </html>
 
-<!-- <style>
-.projects-grid {
-  padding: 30px 0;
-}
-
-.projects-grid .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.project-card {
-  display: block;
-  background: #1a1d22;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.project-info {
-  padding: 16px;
-}
-
-.project-info h3 {
-  font-size: 28px;
-  margin: 0 0 6px;
-  color: #fff;
-}
-
-.project-info p {
-  font-size: 14px;
-  color: #bbb;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .projects-grid .grid {
-    grid-template-columns: 1fr;
-  }
-  .projects-grid {
-  padding: 20px 0;
-}
-}
-</style> -->
-
 
 <style>
   /* Give space below sticky navbar */
   .page-title-section {
-    padding: 120px 0 30px; /* top padding so it sits below navbar */
-    /* background-color: #14171b; */
+    padding: 120px 0 60px;
     text-align: center;
   }
 
-  .page-title {
+  .project-header {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project-header-left {
+    flex: 1;
+  }
+
+  .page-title {
+    text-align: left;
     font-size: 56px;
+    color: #fff;
+    margin: 0 0 20px;
+  }
+
+  .project-subheading {
+    text-align: left;
+    font-size: 18px;
     color: #fff;
     margin: 0;
   }
 
-  /* Highlight active menu item */
-  .cs_nav_list li a.active {
-    color: var(--accent);
+  .project-header-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  @media (max-width: 768px) {
-    .page-title {
-      font-size: 32px;
+  .info-block {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .info-block h4 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .info-block p {
+    margin: 0;
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  .project-images {
+    padding-top: 60px;
+  }
+
+  /* ✅ Desktop-specific widths */
+  @media (min-width: 992px) {
+    .project-header-left {
+      max-width: 50%;
+    }
+
+    .project-header-right {
+      max-width: 30%;
     }
   }
 
+  /* ✅ Mobile/tablet stacking */
+  @media (max-width: 991px) {
+    .project-header {
+      flex-direction: column;
+    }
+
+    .project-header-right {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .page-title {
+      text-align: left;
+      font-size: 46px;
+      color: #fff;
+      margin: 0 0 20px;
+    }
+
+  }
+
+
+  @media (max-width: 768px) {
+    .project-images {
+      padding-top: 20px;
+    }
+  }
   /* Use custom Figma cursor */
 body {
   cursor: url('assets/img/figma-cursor.svg') 0 0, auto;
@@ -266,4 +275,3 @@ body {
 a, button {
   cursor: url('assets/img/figma-cursor-hover.svg') 0 0, pointer;
 }
-</style>

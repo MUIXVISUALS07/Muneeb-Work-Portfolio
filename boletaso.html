@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -22,8 +21,6 @@
 
 <body>
   <!-- Start Preloader -->
-  <!-- <div class="cs_preloader cs_accent_color cs_primary_font">
-      <div class="cs_preloader_in">M</div> -->
   <div class="cs_preloader cs_accent_color cs_primary_font">
     <div class="cs_preloader_in">
       <img src="assets/img/favicon.svg" alt="Logo" class="cs_preloader_logo">
@@ -33,30 +30,24 @@
     /* Style for Preloader Logo */
     .cs_preloader_logo {
       width: 80px;
-      /* Adjust width as needed */
       height: auto;
-      /* Maintain aspect ratio */
       animation: zoomInLogo 2s ease-in-out infinite;
-      /* Zoom-in animation */
     }
 
-    /* Animation for subtle zoom-in effect */
     @keyframes zoomInLogo {
 
       0%,
       100% {
         transform: scale(1);
-        /* Default size */
       }
 
       50% {
         transform: scale(1.1);
-        /* Slightly larger */
       }
     }
   </style>
-  </div>
   <!-- End Preloader -->
+
   <!-- Start Header Section -->
   <header class="cs_site_header cs_style_1 cs_transparent_header cs_primary_color cs_sticky_header">
     <div class="cs_main_header">
@@ -72,10 +63,6 @@
               <ul class="cs_nav_list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Project.html">Portfolio</a></li>
-                <!-- <li><a href="#portfolio">PORTFOLIO</a></li> -->
-                <!-- <li><a href="#about">ABOUT</a></li> -->
-                <!-- <li><a href="#testimonial">Testimonial</a></li>
-                <li><a href="#contact">CONTACT</a></li> -->
               </ul>
             </nav>
           </div>
@@ -85,31 +72,55 @@
   </header>
   <!-- End Header Section -->
 
-
-  
   <!-- Page Title Section -->
-<section class="page-title-section">
-  <div class="container">
-    <div class="cs_height_50 cs_height_lg_75"></div>
-    <!-- <h1 class="page-title">Portfolio</h1> -->
-     <h1 class="page-title">Project Title Here</h1>
-    <p class="project-subheading">Short intro or context of the project...</p>
-<div class="cs_height_30 cs_height_lg_75"></div>
-  </div>
-  <div class="container">
+  <section class="page-title-section">
+    <div class="container">
+      <div class="cs_height_50 cs_height_lg_75"></div>
 
-    <div class="project-images">
-      <img src="assets/img/proj/proj_img.png" alt="Project image 1">
-      <img src="assets/img/proj/proj_img.png" alt="Project image 2">
-      <img src="assets/img/proj/proj_img.png" alt="Project image 3">
-      <img src="assets/img/proj/proj_img.png" alt="Project image 4">
-      <img src="assets/img/proj/proj_img.png" alt="Project image 5">
+      <div class="project-header">
+        <!-- Left: Title & Description -->
+        <div class="project-header-left">
+          <h1 class="page-title">Boletaso - Event Booking Platform</h1>
+          <p class="project-subheading">
+            Boletaso is an event booking website and app that allows users to book concert and
+            stadium tickets in an interactive way. I designed a seamless seat selection experience with 2D stadium
+            views,
+            price details, and bulk booking options. The platform also includes a seller section for reselling tickets
+            with flexible pricing.
+          </p>
+        </div>
+
+        <!-- Right: Info Blocks -->
+        <div class="project-header-right">
+          <div class="info-block">
+            <h4>Strategy</h4>
+            <p>Placeholder text about the project strategy.</p>
+          </div>
+          <div class="info-block">
+            <h4>Design</h4>
+            <p>Placeholder text about the design process.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs_height_30 cs_height_lg_75"></div>
     </div>
 
-  </div>
-</section>
+    <!-- Images -->
+    <div class="container">
+      <div class="project-images">
+        <img src="Projects/boletaso/01.png" alt="Project image 1">
+        <img src="Projects/boletaso/02.png" alt="Project image 2">
+        <img src="Projects/boletaso/03.png" alt="Project image 3">
+        <img src="Projects/boletaso/04.png" alt="Project image 4">
+        <img src="Projects/boletaso/05.png" alt="Project image 5">
+        <img src="Projects/boletaso/06.png" alt="Project image 6">
+        <img src="Projects/boletaso/07.png" alt="Project image 7">
+      </div>
+    </div>
+  </section>
 
-<!-- Start 2nd Footer Section -->
+  <!-- Start 2nd Footer Section -->
   <footer class="footer-section">
     <div class="container">
       <div class="footer-content">
@@ -117,11 +128,11 @@
           <h6>LET’S CONNECT</h6>
           <div class="footer-line"></div>
           <h2>Say Hello!</h2>
-          <a href="mailto:munbdesign07@gmail.com" class="email-btn">Email me →</a>
+          <a href="mailto:muneebdesign07@gmail.com" class="email-btn">Email me →</a>
         </div>
         <div class="footer-right">
           <p>For project inquiries only:</p>
-          <a href="mailto:munbdesign07@gmail.com">munbdesign07@gmail.com</a>
+          <a href="mailto:muneebdesign07@gmail.com">muneebdesign07@gmail.com</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -143,37 +154,112 @@
 
 </html>
 
-
 <style>
   /* Give space below sticky navbar */
   .page-title-section {
-    padding: 120px 0 60px; /* top padding so it sits below navbar */
-    /* background-color: #14171b; */
+    padding: 120px 0 60px;
     text-align: center;
   }
 
-  .page-title {
+  .project-header {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project-header-left {
+    flex: 1;
+  }
+
+  .page-title {
     text-align: left;
     font-size: 56px;
     color: #fff;
-    margin: 0;
+    margin: 0 0 20px;
   }
 
   .project-subheading {
-    display: flex;
     text-align: left;
     font-size: 18px;
     color: #fff;
     margin: 0;
   }
 
+  .project-header-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-block {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .info-block h4 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .info-block p {
+    margin: 0;
+    font-size: 16px;
+    color: #ccc;
+  }
+
   .project-images {
     padding-top: 60px;
   }
 
+  /* ✅ Desktop-specific widths */
+  @media (min-width: 992px) {
+    .project-header-left {
+      max-width: 50%;
+    }
+
+    .project-header-right {
+      max-width: 30%;
+    }
+  }
+
+  /* ✅ Mobile/tablet stacking */
+  @media (max-width: 991px) {
+    .project-header {
+      flex-direction: column;
+    }
+
+    .project-header-right {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .page-title {
+      text-align: left;
+      font-size: 46px;
+      color: #fff;
+      margin: 0 0 20px;
+    }
+
+  }
+
+
   @media (max-width: 768px) {
     .project-images {
-    padding-top: 20px;
+      padding-top: 20px;
+    }
   }
-  }
+  /* Use custom Figma cursor */
+body {
+  cursor: url('assets/img/figma-cursor.svg') 0 0, auto;
+}
+
+/* Links & buttons */
+a, button {
+  cursor: url('assets/img/figma-cursor-hover.svg') 0 0, pointer;
+}

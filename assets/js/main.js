@@ -372,47 +372,6 @@
   /*--------------------------------------------------------------
     22. Cursor Animation
   --------------------------------------------------------------*/
-  $(function () {
-    $('body').append('<span class="cs_cursor_lg d"></span>');
-    $('body').append('<span class="cs_cursor_sm"></span>');
-    $(
-      '.cs_text_btn, .cs_site_header a, .cs_down_btn, .cs_social_btns a, .cs_menu_widget',
-    ).on('mouseenter', function () {
-      $('.cs_cursor_lg').addClass('opacity-0');
-      $('.cs_cursor_sm').addClass('opacity-0');
-    });
-    $(
-      '.cs_text_btn, .cs_site_header a, .cs_down_btn, .cs_social_btns a, .cs_menu_widget',
-    ).on('mouseleave', function () {
-      $('.cs_cursor_lg').removeClass('opacity-0');
-      $('.cs_cursor_sm').removeClass('opacity-0');
-    });
-  });
-  function cursorMovingAnimation(event) {
-    try {
-      const timing = gsap.timeline({
-        defaults: {
-          x: event.clientX,
-          y: event.clientY,
-        },
-      });
-
-      timing
-        .to('.cs_cursor_lg', {
-          ease: 'power2.out',
-        })
-        .to(
-          '.cs_cursor_sm',
-          {
-            ease: 'power2.out',
-          },
-          '-=0.4',
-        );
-    } catch (err) {
-      console.log(err);
-    }
-  }
-  document.addEventListener('mousemove', cursorMovingAnimation);
 })(jQuery); // End of use strict
 
 
@@ -461,3 +420,5 @@ function typeEffect() {
 }
 
 typeEffect();
+
+
