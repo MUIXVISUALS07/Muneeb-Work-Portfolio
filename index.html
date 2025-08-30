@@ -92,7 +92,7 @@
     #home {
       background: url('assets/img/BG2.jpg') no-repeat center center;
       background-size: cover;
-      min-height: 95vh;
+      min-height: 100vh;
       position: relative; /* ✅ required for absolute children */
     }
 
@@ -630,6 +630,14 @@ body {
 a, button {
   cursor: url('assets/img/figma-cursor-hover.svg') 0 0, pointer;
 }
+
+/* Text elements show typing caret on hover */
+p:hover,
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+span:hover, .type-cursor-target:hover {
+  cursor: url('assets/img/type-cursor.svg') 0 0, text;
+}
+
 
 </style>
 
