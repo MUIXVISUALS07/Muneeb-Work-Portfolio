@@ -4214,6 +4214,34 @@ position: relative;
   gap: 2rem;
 }
 
+/* Projects Grid */
+.projects-grid-left {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 2rem;
+}
+
+.projects-grid-2 {
+  display: grid;
+  grid-template-columns: auto 35%; /* left wider, right narrower */
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .projects-grid-2 {
+    grid-template-columns: 1fr; /* single column */
+  }
+}
+
+
+/* Projects Grid */
+.projects-grid-right {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 2rem;
+}
+
 .project-card {
   display: block;
   background: var(--cs_secondary_bg, #14171b);
